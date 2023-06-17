@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Malls</title>
+  <style>
+    /* CSS styles for navigation bar */
+    /* ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    ul.navbar li {
+      float: left;
+    }
+    
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover {
+      background-color: #111;
+    }
+     */
+    /* CSS styles for the body */
+    .mall-buttons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .mall-button {
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+      background-color: #1885DE;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .video-container {
+      margin-top: 20px;
+      background-color: white;
+      margin-left: 600px;
+    }
+    
+    .video-container iframe {
+      width: 100%;
+      height: 400px;
+    }
+    body {
+  background-image: url("/static/backg.png");
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+  background-size: cover;
+}
+.navbar {
+      background-color: #0b0b0b;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar li {
+      margin-right: 10px;
+      color: white;
+    }
+
+    .navbar li:last-child {
+      margin-right: 0;
+    }
+  </style>
+  <script>
+    function playVideo(videoUrl) {
+      var videoContainer = document.getElementById("videoContainer");
+      videoContainer.innerHTML = '<iframe src="' + videoUrl + '" frameborder="0" allowfullscreen></iframe>';
+    }
+  </script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Body with shopping mall buttons and video container -->
+  <div class="mall-buttons">
+  <button class="mall-button" onclick="playVideo('/static/boxvedio.mp4')">Camera 1</button><br>
+  <button class="mall-button" onclick="playVideo('video_url_2')">Camera 2</button><br>
+  <button class="mall-button" onclick="playVideo('video_url_3')">Camera 3</button><br>
+</div>
+  <!-- <a class="mall-button" href="#">Shopping Mall 1</a><br>
+    <a class="mall-button" href="#">Shopping Mall 2</a><br>
+    <a class="mall-button" href="#">Shopping Mall 3</a><br>
+    <a class="mall-button" href="#">Shopping Mall 4</a><br>
+    <a class="mall-button" href="#">Shopping Mall 5</a> -->
+  
+  <div class="video-container" id="videoContainer"></div>
+</body>
+</html>
