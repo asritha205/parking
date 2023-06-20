@@ -93,7 +93,7 @@
                 <div class="mall-buttons">
                     <button class="mall-button" onclick="show_level_1()" id="btnID">Level 1</button>
                     <button class="mall-button" onclick="show_level_2()" id="btnID">Level 2</button>
-                    <button class="mall-button" >Shopping Mall 3</button>
+                    <button class="mall-button" onclick="show_level_3()" id="btnID">Level 3</button>
                 </div>    
 
                 <!-- <img id="image" src="" width="50%"/> -->
@@ -106,7 +106,7 @@
 <script>
 
 
-function show_level_1() {
+        function show_level_1() {
             let image = document.getElementById("videoContainer");
             image.src =
             "{{ url_for('video_feed_1')}}"
@@ -121,6 +121,16 @@ function show_level_1() {
             // document.getElementById("btnID")
             //     .style.display = "none";
         }
+
+        function show_level_3() {
+            let image = document.getElementById("videoContainer");
+            image.src =
+            "{{ url_for('video_feed_3')}}"
+            // document.getElementById("btnID")
+            //     .style.display = "none";
+        }
+        
+
     
 </script>
 </html>

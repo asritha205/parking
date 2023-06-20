@@ -146,6 +146,9 @@ def video_feed_1():
 def video_feed_2():
     return StreamingResponse(management("static/CMR_bike.mp4","bikepickle",4), media_type='multipart/x-mixed-replace; boundary=frame')
 
+@app.get('/video_feed_3')
+def video_feed_3():
+    return StreamingResponse(management("static/CMR_car_ug.mp4","pickle_ug_1",2), media_type='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
    uvicorn.run(app, host='0.0.0.0', port=8000)
